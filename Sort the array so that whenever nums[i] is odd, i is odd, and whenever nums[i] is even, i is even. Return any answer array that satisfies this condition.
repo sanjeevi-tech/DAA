@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void sortArray(int* nums, int numsSize){
+    int temp, i, j;
+    for(i=0; i<numsSize; i+=2){
+        for(j=i+2; j<numsSize; j+=2){
+            if(nums[i] > nums[j]){
+                temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+            }
+        }
+    }
+}
